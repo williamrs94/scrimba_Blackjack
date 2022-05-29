@@ -1,6 +1,6 @@
 html {
     box-sizing: border-box;
-    font-size: 90.5%;
+    font-size: 60.5%;
 }
 
 
@@ -8,6 +8,7 @@ html {
 @media (max-width: 75em) {
     html {
       font-size: 60%;
+      background-repeat: no-repeat;
     }
   }
   
@@ -15,6 +16,7 @@ html {
   @media (max-width: 61.25em) {
     html {
       font-size: 58%;
+      background-repeat: no-repeat;
     }
   }
   
@@ -22,18 +24,32 @@ html {
   @media (max-width: 28.75em) {
     html {
       font-size: 55%;
+      background-repeat: no-repeat;
     }
   }
 
 body {
+  background-color: black;
+  width: 250px;
+  height: auto;
+  overflow-x: hidden; /* remove a barra de scroll linha horizontal */
+}
+
+img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 500px;
+}
+
+.container {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
-    background-image: url("backgounrdimg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     font-weight: bold;
     color: white;
     text-align: center;
-    box-sizing: border-box;
     word-wrap: break-word;
     min-width: fit-content;
     margin-left: auto;
@@ -43,16 +59,18 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-right: -50%;
     transform: translate(-50%, -50%);
-}
+    background-color: black;
+    background: transparent;
+  }
 
 @media (max-width: 28.75em) {
   body {
     justify-content: center;
     text-align: center;
     margin: 0 0rem;
-    font-size: 3rem;
+    font-size: 2rem;
+    background-repeat: no-repeat;
   }
 }
 
@@ -78,11 +96,13 @@ button {
 }
 
 footer {
-  font-size: 0.7em;
-  position:absolute;
-  bottom: -200px;
-  width:100%;
+  position: absolute; /* deixa o footer no center e embaixo */
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  text-align: center;
   color: white;
+  font-size: 1rem;
 }
 
 a {
